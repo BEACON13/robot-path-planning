@@ -41,8 +41,10 @@ def a_star_search(start, goal, workspace, k):
 
     while open_list:
         current_state = heapq.heappop(open_list)
-        node_count += 1
-
+        # no repeated states allowed
+        if current_state.position in closed_set:
+            continue
+        
         # Check if the goal has been reached
         if current_state.position == goal:
             path, f_values_path = reconstruct_path(current_state)
@@ -83,6 +85,9 @@ def a_star_search(start, goal, workspace, k):
             neighbor_state = State(position=neighbor_pos, g=tentative_g, h=tentative_h,
                                    f=tentative_f, parent=current_state, action=action, direction=action)
             heapq.heappush(open_list, neighbor_state)
+
+            if existing_state == None:
+                node_count += 1
 
     # Return None if no path was found
     return None

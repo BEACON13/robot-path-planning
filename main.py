@@ -1,5 +1,6 @@
 from utils import read_input, write_output, get_k_value
 from a_star import a_star_search
+import sys
 
 
 def main():
@@ -7,7 +8,7 @@ def main():
     main function
     """
     # 1. read input
-    input_file = 'Sample input.txt'
+    input_file = sys.argv[1]
     start, goal, workspace = read_input(input_file)
 
     # 2. get k value
