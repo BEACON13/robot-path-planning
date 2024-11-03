@@ -2,6 +2,11 @@ from utils import read_input, write_output, get_k_value
 from a_star import a_star_search
 import sys
 
+"""
+Team members:
+Zan Ni (zn2161)
+Siqi Wan (sw6195)
+"""
 
 def main():
     """

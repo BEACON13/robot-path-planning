@@ -3,6 +3,12 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle
 import sys
 
+"""
+Team members:
+Zan Ni (zn2161)
+Siqi Wan (sw6195)
+"""
+
 def plot_maze(file_path):
     try:
         # Load the maze from the .txt file

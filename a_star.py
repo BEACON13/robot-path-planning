@@ -1,6 +1,11 @@
 import heapq
 from utils import calculate_cost, heuristic, calculate_angle, MOVES
 
+"""
+Team members:
+Zan Ni (zn2161)
+Siqi Wan (sw6195)
+"""
 
 class State:
     """

@@ -1,5 +1,11 @@
 import math
 
+"""
+Team members:
+Zan Ni (zn2161)
+Siqi Wan (sw6195)
+"""
+
 # MOVES dictionary adjusted to align with the (i, j) coordinate system and new direction numbering
 MOVES = {
     0: (1, 0),  # Move right
