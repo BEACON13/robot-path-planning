@@ -7,6 +7,7 @@ Zan Ni (zn2161)
 Siqi Wan (sw6195)
 """
 
+
 class State:
     """
     State class representing a cell in the workspace.
@@ -49,7 +50,7 @@ def a_star_search(start, goal, workspace, k):
         # no repeated states allowed
         if current_state.position in closed_set:
             continue
-        
+
         # Check if the goal has been reached
         if current_state.position == goal:
             path, f_values_path = reconstruct_path(current_state)
@@ -114,6 +115,10 @@ def reconstruct_path(goal_state):
         path.append(current.action)
         f_values.append(current.f)
         current = current.parent
+
+    # Add f(n) value for the start state
+    f_values.append(current.f)
+
     path.reverse()
     f_values.reverse()
     return path, f_values
